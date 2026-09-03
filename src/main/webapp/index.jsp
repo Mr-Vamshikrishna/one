@@ -58,6 +58,29 @@
     .btn-ghost:hover { background: rgba(255,255,255,0.25); transform: scale(1.02); }
     .btn-sm { padding: 8px 20px; font-size: 13px; }
 
+    /* ===== TOP PROMO BANNER ===== */
+    .top-promo {
+      background: var(--accent);
+      color: #fff;
+      text-align: center;
+      padding: 10px 20px;
+      font-weight: 600;
+      font-size: 15px;
+      letter-spacing: 0.3px;
+      border-bottom: 2px solid rgba(255,255,255,0.1);
+    }
+    .top-promo i {
+      margin: 0 8px;
+      opacity: 0.8;
+    }
+    .top-promo span {
+      background: rgba(255,255,255,0.2);
+      padding: 2px 14px;
+      border-radius: 40px;
+      margin: 0 6px;
+      font-weight: 700;
+    }
+
     /* ===== HEADER ===== */
     header {
       position: sticky; top: 0; z-index: 100;
@@ -427,6 +450,7 @@
       .testimonial-card { flex: 0 0 280px; }
       .hero .actions .btn { padding: 10px 22px; font-size: 14px; }
       .section { padding: 36px 0; }
+      .top-promo { font-size: 13px; padding: 8px 12px; }
     }
     @media (max-width: 480px) {
       .products-grid { grid-template-columns: 1fr 1fr; gap: 10px; }
@@ -449,10 +473,18 @@
       .cat-card { padding: 16px 10px; }
       .cat-card .icon-wrap { width: 48px; height: 48px; font-size: 20px; }
       .cat-card h4 { font-size: 13px; }
+      .top-promo { font-size: 12px; padding: 6px 10px; }
     }
   </style>
 </head>
 <body>
+
+<!-- ===== TOP PROMO BANNER ===== -->
+<div class="top-promo">
+  <i class="fas fa-gift"></i>
+  Hi Alekya, Shop for three tops just for <span>999 R/s</span>
+  <i class="fas fa-arrow-right" style="margin-left: 12px;"></i>
+</div>
 
 <header>
   <div class="container header-inner">
@@ -549,29 +581,4 @@
         </div>
         <a href="#" class="view-all">View all <i class="fas fa-arrow-right"></i></a>
       </div>
-      <div class="products-grid" id="productsGrid" aria-live="polite"></div>
-    </div>
-  </section>
-
-  <!-- DEAL -->
-  <section class="section" id="deals" aria-labelledby="deals-title">
-    <div class="container">
-      <div class="section-header">
-        <div class="title-group">
-          <h2 id="deals-title">⚡ Flash deal</h2>
-          <p>Limited stock – don't blink</p>
-        </div>
-      </div>
-      <div class="deal-wrap">
-        <div class="deal-img">
-          <img src="https://images.unsplash.com/photo-1517336714731-489689fd1ca8?auto=format&fit=crop&w=800&q=80" alt="MacBook Air M2" loading="lazy">
-        </div>
-        <div class="deal-content">
-          <span class="tag"><i class="fas fa-bolt"></i> Limited offer</span>
-          <h3>MacBook Air M2</h3>
-          <p class="desc">Thin, light, and incredibly powerful — the M2 chip redefines performance.</p>
-          <div>
-            <span class="price-big">$999 <span class="old">$1,199</span></span>
-          </div>
-          <p class="stock">Only <strong>12</strong> items left — hurry!</p>
-          <div
+      <div class="products-grid" id="productsGrid" aria-live

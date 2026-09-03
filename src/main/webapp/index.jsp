@@ -58,27 +58,37 @@
     .btn-ghost:hover { background: rgba(255,255,255,0.25); transform: scale(1.02); }
     .btn-sm { padding: 8px 20px; font-size: 13px; }
 
-    /* ===== TOP PROMO BANNER ===== */
+    /* ===== TOP PROMO BANNER — LARGER FONT ===== */
     .top-promo {
       background: var(--accent);
       color: #fff;
       text-align: center;
-      padding: 10px 20px;
-      font-weight: 600;
-      font-size: 15px;
-      letter-spacing: 0.3px;
-      border-bottom: 2px solid rgba(255,255,255,0.1);
+      padding: 16px 20px;
+      font-weight: 700;
+      font-size: 22px;
+      letter-spacing: 0.5px;
+      border-bottom: 3px solid rgba(255,255,255,0.15);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 14px;
+      flex-wrap: wrap;
     }
     .top-promo i {
-      margin: 0 8px;
-      opacity: 0.8;
+      font-size: 24px;
+      opacity: 0.9;
     }
     .top-promo span {
       background: rgba(255,255,255,0.2);
-      padding: 2px 14px;
-      border-radius: 40px;
+      padding: 4px 20px;
+      border-radius: 60px;
+      font-weight: 800;
+      font-size: 24px;
       margin: 0 6px;
-      font-weight: 700;
+    }
+    .top-promo .arrow {
+      font-size: 22px;
+      margin-left: 6px;
     }
 
     /* ===== HEADER ===== */
@@ -427,6 +437,8 @@
       .newsletter-wrap { padding: 32px 28px; flex-direction: column; text-align: center; }
       .newsletter-wrap form { max-width: 100%; }
       .search-wrap { min-width: 150px; }
+      .top-promo { font-size: 19px; padding: 14px 16px; }
+      .top-promo span { font-size: 20px; }
     }
     @media (max-width: 768px) {
       nav.main-nav { display: none; }
@@ -450,7 +462,9 @@
       .testimonial-card { flex: 0 0 280px; }
       .hero .actions .btn { padding: 10px 22px; font-size: 14px; }
       .section { padding: 36px 0; }
-      .top-promo { font-size: 13px; padding: 8px 12px; }
+      .top-promo { font-size: 17px; padding: 12px 14px; gap: 8px; }
+      .top-promo span { font-size: 18px; padding: 2px 14px; }
+      .top-promo i { font-size: 18px; }
     }
     @media (max-width: 480px) {
       .products-grid { grid-template-columns: 1fr 1fr; gap: 10px; }
@@ -473,17 +487,20 @@
       .cat-card { padding: 16px 10px; }
       .cat-card .icon-wrap { width: 48px; height: 48px; font-size: 20px; }
       .cat-card h4 { font-size: 13px; }
-      .top-promo { font-size: 12px; padding: 6px 10px; }
+      .top-promo { font-size: 15px; padding: 10px 12px; gap: 6px; }
+      .top-promo span { font-size: 16px; padding: 2px 12px; }
+      .top-promo i { font-size: 16px; }
+      .top-promo .arrow { font-size: 16px; }
     }
   </style>
 </head>
 <body>
 
-<!-- ===== TOP PROMO BANNER ===== -->
+<!-- ===== TOP PROMO BANNER — LARGER FONT ===== -->
 <div class="top-promo">
   <i class="fas fa-gift"></i>
   Hi Alekya, Shop for three tops just for <span>999 R/s</span>
-  <i class="fas fa-arrow-right" style="margin-left: 12px;"></i>
+  <i class="fas fa-arrow-right arrow"></i>
 </div>
 
 <header>
@@ -562,23 +579,4 @@
     <div class="container">
       <div class="section-header">
         <div class="title-group">
-          <h2 id="cat-title">Browse by category</h2>
-          <p>Find exactly what you need</p>
-        </div>
-        <a href="#" class="view-all">All categories <i class="fas fa-arrow-right"></i></a>
-      </div>
-      <div class="categories-grid" id="categoriesGrid" aria-live="polite"></div>
-    </div>
-  </section>
-
-  <!-- PRODUCTS -->
-  <section class="section" id="products" aria-labelledby="prod-title">
-    <div class="container">
-      <div class="section-header">
-        <div class="title-group">
-          <h2 id="prod-title">🔥 Trending now</h2>
-          <p>What everyone's adding to cart</p>
-        </div>
-        <a href="#" class="view-all">View all <i class="fas fa-arrow-right"></i></a>
-      </div>
-      <div class="products-grid" id="productsGrid" aria-live
+          <h2 id="cat-title
